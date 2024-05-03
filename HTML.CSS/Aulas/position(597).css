@@ -1,0 +1,34 @@
+*
+{
+    margin: 0;
+}
+.filho1, .filho2,.filho3
+{
+    width: 300px;
+    height: 300px;
+    background: red;
+    margin: 10px;
+}
+.filho2 
+{
+    position: absolute;
+    background: greenyellow;
+    z-index: 1; /*camada, -1 etc*/
+}
+.filho1 
+{
+    top: 50%;
+    left: 50%;
+    margin-top: -150px;
+    margin-left: -150px;
+    position: absolute;
+    z-index: 2;
+}
+/*
+ul li.sticky
+{
+    position: sticky;
+    background: gray;
+    top: 0
+}
+*/

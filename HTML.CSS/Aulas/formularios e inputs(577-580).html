@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tinus Informática Ltda</title>
+    <style>
+        label
+        {
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <!--Start Form Section-->
+    <form action="#" method="get" target="_blank" autocomplete="off">
+        <h1>Formulário</h1>
+        <p>
+            <label for="name">Nome completo:</label>
+            <input type="text" name="name" placeholder=" Ex: José Carlos da Silva">
+        </p>
+        <p>
+            <label for="date">Data:</label>
+            <input type="date" name="date">
+        </p>
+        <p>
+            <label for="datetime">Data:</label>
+            <input type="datetime-local" name="datetime">
+        </p>
+        <p>
+            <label for="time">Horário:</label>
+            <input type="time" name="time">
+        </p>
+        <p>
+            <label for="color">Cor:</label>
+            <input type="color" name="color">
+        </p>
+        <p>
+            <label for="email">E-mail:</label>
+            <input type="email" name="email" placeholder="Ex: email@email.com">
+        </p>
+        <p>
+            <label for="file">Foto 3x4:</label>
+            <input type="file" name="file" accept=".file, .png, .svg" multiple>
+        </p>
+        <p>
+            <label for="number">Número:</label>
+            <input type="number" name="number" min="100" max="500" step="10">
+        </p>
+        <p>
+            <label for="password">Senha:</label>
+            <input type="password" name="password">
+        </p>
+        <p>
+            <input type="range" name="range">
+            <!--list="tickmarks"-->
+        </p>
+        <p>
+            <label for="url">Sua URL:</label>
+            <input type="url" name="url">
+        </p>
+        <p>
+            <label for="search">Buscar:</label>
+            <input type="search" name="search">
+        </p>
+        <p>
+            <label for="select">Selecione:</label>
+            <select name="select" multiple>
+                <optgroup label="Grupo 1">
+                <option value="qualquer 1" label="Valor 1" selected>Valor</option>
+                <option value="qualquer 2" label="Valor 2">Valor</option>
+                <option value="qualquer 3" label="Valor 3">Valor</option>
+                <option value="qualquer 4" label="Valor 4">Valor</option>
+                <option value="qualquer 5" label="Valor 5" disabled>Valor</option>
+                <option value="qualquer 6" label="Valor 6">Valor</option>
+                </optgroup>
+            </select>
+        </p>
+        <p>
+            <label for="textarea">Texto:</label>
+            <textarea name="textarea" rows="8"
+            cols="10">
+            </textarea>
+        </p>
+        <p>
+            <button type="reset">Limpar tudo</button>
+            <button type="submit">Enviar</button>
+        </p>
+      
+
+    </form>
+    <!--Finish Form Section-->
+    
+</body>
+</html>

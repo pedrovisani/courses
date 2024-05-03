@@ -1,0 +1,39 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+html
+{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+.pai
+{
+    width: 50rem;
+    height: 100vh;
+    background: yellow;
+    overflow: hidden;
+}
+.pai > div
+{
+    width: 50%; /*% se baseia no elemento pai*/
+    height: 50rem;
+    background: blue
+}
+.color-one
+{
+    background: turquoise;
+}
+.color-two
+{
+    background: violet;
+}
+p
+{
+    font-size: 1.6rem; /*em se baseia no elemento mais próximo*/
+                       /*rem se baseia no elemento mais próximo*/
+                       /*vmin se baseia na menor dimensão do vw */
+                       /*vmax se baseia na maior dimensão do vw*/
+}
+

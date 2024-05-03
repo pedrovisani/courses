@@ -1,0 +1,68 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.flex-container
+{
+    display: flex;
+    /*flex-direction: row (horizontal);
+    align-items: stretch; eixo perpendicular
+    align-self: center; alinhar item
+    justify-content: flex-start; eixo principal
+    flex-flow: row (horizontal) wrap(ou nowrap); engloba flex-direction e flex-wrap*/
+    align-items: flex-start;
+    align-content: center;
+    flex-wrap: wrap;
+    background: yellowgreen;
+    height: 640px;
+    justify-content: flex-start;
+    /*gap: 30px; espaçamento entre os containers*/
+}
+.flex-item /*nth-child(x) para selecionar um elemento especifico*/
+{
+    /*flex-grow: 1; ajusta contéudos na página*/
+    /*flex-basis: 320px; reserva espaço para cada um dos elementos*/
+    /*flex-shrink: 1 ou 0; permite ou não que o elemento diminua */
+    /*flex: 1 1 320px; engloba todos na ordem GROW SHRINK BASIS*/
+    /*order: 1; ordena os elementos*/
+    margin-bottom: 2%;
+    width: 100%;
+    height: 200px;
+    color: white;
+    background: red;
+    margin: 10px;
+}
+body
+{
+    font-size: 24px;
+}
+p
+{
+    margin: 0 0 24px;
+}
+.two-columns
+{
+    display: flex;
+}
+.two-columns .col
+{
+    display: flex;
+    flex-direction: column;
+    background: lawngreen;
+    margin: 15px;
+    padding: 30px;
+}
+.gallery
+{
+    display: flex;
+    flex-flow: row wrap;
+}
+.gallery .img
+{
+    flex: 1 0 20%;
+    height: 50px;
+    background: blue;
+    margin: 10px;
+}
