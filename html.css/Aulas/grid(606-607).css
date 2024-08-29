@@ -1,0 +1,49 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    font: sans-serif;
+    font-size: 40px;
+}
+.grid
+{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr); /*cabe mesmas coisas que columns*/
+    grid-template-columns: [um] 1fr [dois] 1fr [três] 1fr /*ou repeat(3, 1fr)*/ /*fragmento*/;
+    /*minmax(320px, 1fr) - tamanho minimo e maximo da coluna
+     repeat(auto-fill, minmax(320px, 1fr) - auto-fill tenta encaixar colunas na tela*/
+    gap: 30px;
+}
+.grid div
+{
+    background: tomato;
+    min-height: 100px;
+}
+.grid div:nth-child(5)
+{
+    background: crimson;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 6;
+    /* ou grid-row: span 2; 
+       ou grid-column: span 3;*/
+    /* grid-column-start: um;
+       grid-column-end: quatro;
+       grid-column: um / quatro;
+       grid-column: span 2 / 4;*/   
+    /* grid-area: 1 / 1 / 4 / 4 (CILICFLF) */   
+}
+@media (max-width: 768px)
+{
+    .grid div:nth-child(5)
+    {
+        grid-column: span 1;
+    }
+}

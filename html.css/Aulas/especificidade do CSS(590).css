@@ -1,0 +1,26 @@
+/*
+style / ID / Classes e Pseudo-classes / Elementos e Pseudo-elementos
+1       0    0                          0 
+0       1    0                          0 
+0            1                          0
+0       0    0                          1
+
+!important sobrescreve qualquer um
+
+especificidade
+empate *a última sobrescreve
+style
+!important
+*/
+#p 
+{
+    background: red;
+}
+.p 
+{
+    background: yellow;
+}
+#p.p /*maior especificidade*/
+{
+    background: blue;
+}

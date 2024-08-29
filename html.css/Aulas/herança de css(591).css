@@ -1,0 +1,13 @@
+body /*propriedades são transferidas do body para os elementos*/
+{
+    font-family: sans-serif;
+    color: red;
+}
+p 
+{
+    font-size: initial; /*não herda propriedades css*/
+}
+p 
+{
+    font-size: inherit; /*herda propriedades css*/
+}

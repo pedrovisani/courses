@@ -1,0 +1,18 @@
+*
+{
+  margin: 0;
+  padding: 0;
+}
+
+.pai h1+p
+{
+    color: aqua;
+}
+.pai p+h1
+{
+    color: yellowgreen;
+}
+[atributo~="valor"] /*[atributo|="valor"] > seguido de traço [atributo^="valor"] > começa com [atributo$="valor"] > termina com [atributo*="valor"] > contém */
+{
+    color: red;
+}

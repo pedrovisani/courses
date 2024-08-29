@@ -1,0 +1,43 @@
+<%- include('includes/head'); %>
+
+    <body>
+        <section>
+            <h1>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem numquam ipsam qui unde, cupiditate
+                quis, quo atque sequi aperiam repellat possimus! Libero nam consequatur vero voluptatibus numquam,
+                aperiam obcaecati maiores.
+            </h1>
+            <form action="/" method="post">
+                <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                <label>Cliente</label>
+                <input type="text" name="cliente">
+                <button>Submit</button>
+            </form>
+        </section>
+
+        <script src="./assets/js/bundle.js"></script>
+
+        <script type="module">
+            const PORT = 3000
+            const response = await fetch(`http://127.0.0.1:${PORT}/csrf-token`);
+            const { token } = await response.json();
+            console.log('the token', token);
+
+            const post = await fetch(`http://127.0.0.1:${PORT}/protected_endpoint`, {
+                method: 'POST',
+                headers: {
+                    'x-csrf-token': token,
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    name: 'John Doe',
+                    id: 'xasd2312x2ñljkasdas'
+                })
+            })
+            const app = document.getElementById('app');
+            const data = JSON.stringify(await post.json());
+            app.innerHTML = `<code>${data}</code>`
+        </script>
+    </body>
+
+    </html>
