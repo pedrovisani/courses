@@ -1,5 +1,5 @@
 c = float(input('Digite o valor será investido: '))
-i = float(input('Digite qual será a taxa de juros: '))
+i = float(input('Digite qual será a taxa de juros (%): '))
 t = int(input('Digite a quantidade de meses: '))
 a = input('Terá aporte mensal (s/n)? ')
 l = []
@@ -14,11 +14,11 @@ if a == 's':
       c = M + p
       if len(l) == t:
         break
-  contador = 1
-  for item in l:
-      print('Resultado do', contador,'º mês:', item)
-      contador = contador + 1
-  print('Ganho total: R$', round(sum(g), 2))
+  counter = 1
+  for i in l:
+      print(f'Resultado do {counter}º mês: R$ {i:,.2f}'.replace(',', 'X').replace('.', ',').replace('X', '.'))
+      counter = counter + 1
+  print(f'Receita total gerada com jc: R$ {sum(g):,.2f}'.replace(',', 'X').replace('.', ',').replace('X', '.'))
     
 if a == 'n':
     while len(l) <= t:
@@ -28,11 +28,8 @@ if a == 'n':
       c = M
       if len(l) == t:
         break
-    contador = 1
-    for item in l: 
-      print('Resultado do', contador,'º mês:', item)
-      contador = contador + 1
-    print('Ganho total: R$', round(sum(g), 2))
-
-
-
+    counter = 1
+    for i in l: 
+      print(f'Resultado do {counter}º mês: R$ {i:,.2f}'.replace(',', 'X').replace('.', ',').replace('X', '.'))
+      counter = counter + 1
+    print(f'Receita total gerada com jc: R$ {sum(g):,.2f}'.replace(',', 'X').replace('.', ',').replace('X', '.'))
