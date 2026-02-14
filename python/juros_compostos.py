@@ -16,9 +16,11 @@ if a == 's':
         break
   counter = 1
   for i in l:
-      print(f'Resultado do {counter}º mês: R$ {i:,.2f}'.replace(',', 'X').replace('.', ',').replace('X', '.'))
+      print(f'Resultado do {counter}º mês: R$ {i:,.2f}'\
+            .replace(',', 'X').replace('.', ',').replace('X', '.'))
       counter = counter + 1
-  print(f'Receita total gerada com jc: R$ {sum(g):,.2f}'.replace(',', 'X').replace('.', ',').replace('X', '.'))
+  print(f'Receita total gerada com jc: R$ {sum(g):,.2f}'\
+        .replace(',', 'X').replace('.', ',').replace('X', '.'))
     
 if a == 'n':
     while len(l) <= t:
@@ -30,6 +32,8 @@ if a == 'n':
         break
     counter = 1
     for i in l: 
-      print(f'Resultado do {counter}º mês: R$ {i:,.2f}'.replace(',', 'X').replace('.', ',').replace('X', '.'))
+      print(f'Resultado do {counter}º mês: R$ {i:,.2f}'\
+            .replace(',', 'X').replace('.', ',').replace('X', '.'))
       counter = counter + 1
-    print(f'Receita total gerada com jc: R$ {sum(g):,.2f}'.replace(',', 'X').replace('.', ',').replace('X', '.'))
+    print(f'Receita total gerada com jc: R$ {sum(g):,.2f}'\
+          .replace(',', 'X').replace('.', ',').replace('X', '.'))
